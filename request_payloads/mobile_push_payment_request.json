@@ -1,0 +1,30 @@
+
+{
+"acquirerCountryCode": "356",
+"acquiringBin": "408972",
+"amount": "124.05",
+"businessApplicationId": "MP",
+"cardAcceptor": {
+"address": {
+"city": "KOLKATA",
+"country": "IN"
+},
+"idCode": "CA-IDCode-77765",
+"name": "Visa Inc. USA-Foster City"
+},
+"localTransactionDateTime": "2020-05-27T11:40:38",
+"purchaseIdentifier": {
+"type": "0",
+"referenceNumber": "REF_123456789123456789123"
+},
+"recipientPrimaryAccountNumber": "4123640062698797",
+"retrievalReferenceNumber": "412770451035",
+"secondaryId": "123TEST",
+"senderAccountNumber": "4027290077881587",
+"senderName": "Jasper",
+"senderReference": "",
+"systemsTraceAuditNumber": "451035",
+"transactionCurrencyCode": "356",
+"merchantCategoryCode": "5812",
+"settlementServiceIndicator": "9"
+}
