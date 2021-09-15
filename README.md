@@ -26,5 +26,16 @@ Funds Transfer Test
   In the main directory, the CFC_Test.py files contains methods that reach out the the Visa API sandbox to makes pull and push funds transfer requests.  The POST methods actually perform the transfers, the GET methods provide status.  Canned values are used that are accepted by the sandbox.  The CFC_FundsTransferTest.ipynb Notebook has commands to import CFC_Test and run each of the 4 funds transfer methods.
 	
   The CFC_FundsTransferTest.ipynb also contains commands to try to setup and run all of the test files that came out of the box with the Visa sample code.  These are not currently working.  It could be due to permissions restrictions in the Code for Charlottesville environment or issues with restructuring the directories.
-	
+ 
+API Test
+
+  This directory is intended to teste hosting an API from the CFC JupyterHub environment using Kernel Gateway.  The API can be launched but is currently just accessible internally.  This is the site I used as a guide:
+  
+    https://ndres.me/post/jupyter-notebook-rest-api/
+    
+  After editing the Kernel Gateway config I used this command in a terminal to start the notebook API:
+  
+    jupyter kernelgateway --KernelGatewayApp.api='kernel_gateway.notebook_http' --KernelGatewayApp.seed_uri='CFC_VisaTest/API_test/API_Endpoint_Test.ipynb'
+  
+  
 
