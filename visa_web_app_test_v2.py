@@ -40,6 +40,9 @@ def test_push_funds_transactions(cust,vendor,amt):
                                                                'CFC Push Funds Transaction Test', 'post')
 															   
 def setUp():
+    st.text('Successfully called function')
+	
+def setUpReal():
     #super(TestFundsTransfer, self).setUp()
     visa_api_client = VisaAPIClient()
     #self.response_recorder = ResponseRecorder()
