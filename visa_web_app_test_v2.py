@@ -7,7 +7,7 @@ from helpers.visa_api_client import VisaAPIClient
 
 pull_funds_request = ""
 push_funds_request_post = ""
-visa_api_client
+visa_api_client = VisaAPIClient()
 
 def submitTest(cust,vendor,amt):
     st.text('Payment submitted')
@@ -49,10 +49,8 @@ def setUpTest():
 def setUp():
     global pull_funds_request
     global push_funds_request_post
-    global visa_api_client
-    
+        
     #super(TestFundsTransfer, self).setUp()
-    visa_api_client = VisaAPIClient()
     #self.response_recorder = ResponseRecorder()
     date = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
     with open("request_payloads/pull_funds_transaction_request.json", 'r') as file:
