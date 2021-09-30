@@ -1,5 +1,8 @@
 import streamlit as st
 
+def setUp():
+    st.text('Successfully called function')
+
 """
 # Code for Charlottesville
 Visa API Test
@@ -15,6 +18,8 @@ amount = st.text_input("Amount: ", 0.00)
 
 if(st.button("Submit")):
     st.text('Customer ' + customer_acct + ' paid Vendor ' + vendor_acct + ' $' + amount)
+   
+setUp()
 
 
 
