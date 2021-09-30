@@ -24,24 +24,24 @@ if(st.button("Submit")):
     submitTest(customer_acct, vendor_acct, amount)
 	
 def submitTest(cust,vendor,amt):
-	st.text('Payment submitted')
+    st.text('Payment submitted')
 	
-	test_pull_funds_transactions(cust,vendor,amt)
-	test_push_funds_transactions(cust,vendor,amt)
+    test_pull_funds_transactions(cust,vendor,amt)
+    test_push_funds_transactions(cust,vendor,amt)
 	
-	st.text('Payment completed')
-	st.text('Customer ${cust} paid Vendor ${vendor} $${amt}')
+    st.text('Payment completed')
+    st.text('Customer ${cust} paid Vendor ${vendor} $${amt}')
 	
-	return
+    return
 	
 def test_pull_funds_transactions(cust,vendor,amt):
     base_uri = 'visadirect/'
     resource_path = 'fundstransfer/v1/pullfundstransactions'
 	
-	pull_funds_request['senderAccountNumber'] = cust
-	pull_funds_request['amount'] = amt
+    pull_funds_request['senderAccountNumber'] = cust
+    pull_funds_request['amount'] = amt
     
-	response = visa_api_client.do_mutual_auth_request(base_uri + resource_path, pull_funds_request,
+    response = visa_api_client.do_mutual_auth_request(base_uri + resource_path, pull_funds_request,
                                                                'CFC Push Funds Transaction Test', 'post')
     #self.response_recorder.record_json_data("pull_funds_transaction_post_response.json",
      #                                       response.json(encoding='utf-8'))
@@ -50,21 +50,21 @@ def test_push_funds_transactions(cust,vendor,amt):
     base_uri = 'visadirect/'
     resource_path = 'fundstransfer/v1/pushfundstransactions'
 	
-	push_funds_request_post['senderAccountNumber'] = cust
-	push_funds_request_post['recipientPrimaryAccountNumber'] = vendor
-	push_funds_request_post['amount'] = amt
+    push_funds_request_post['senderAccountNumber'] = cust
+    push_funds_request_post['recipientPrimaryAccountNumber'] = vendor
+    push_funds_request_post['amount'] = amt
     
-	response = visa_api_client.do_mutual_auth_request(base_uri + resource_path, push_funds_request_post,
+    response = visa_api_client.do_mutual_auth_request(base_uri + resource_path, push_funds_request_post,
                                                                'CFC Push Funds Transaction Test', 'post')
 															   
 def setUp():
-        #super(TestFundsTransfer, self).setUp()
-        visa_api_client = VisaAPIClient()
-        #self.response_recorder = ResponseRecorder()
-        date = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
-        with open("request_payloads/pull_funds_transaction_request.json", 'r') as file:
-            pull_funds_request = json.load(file)
-            pull_funds_request['localTransactionDateTime'] = date
+    #super(TestFundsTransfer, self).setUp()
+    visa_api_client = VisaAPIClient()
+    #self.response_recorder = ResponseRecorder()
+    date = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+    with open("request_payloads/pull_funds_transaction_request.json", 'r') as file:
+        pull_funds_request = json.load(file)
+        pull_funds_request['localTransactionDateTime'] = date
         push_funds_request_post = json.loads('''{
             "acquirerCountryCode": "840",
             "acquiringBin": "408999",
