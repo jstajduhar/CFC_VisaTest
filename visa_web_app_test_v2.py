@@ -7,6 +7,7 @@ from helpers.visa_api_client import VisaAPIClient
 
 pull_funds_request = ""
 push_funds_request_post = ""
+visa_api_client
 
 def submitTest(cust,vendor,amt):
     st.text('Payment submitted')
@@ -48,6 +49,8 @@ def setUpTest():
 def setUp():
     global pull_funds_request
     global push_funds_request_post
+    global visa_api_client
+    
     #super(TestFundsTransfer, self).setUp()
     visa_api_client = VisaAPIClient()
     #self.response_recorder = ResponseRecorder()
