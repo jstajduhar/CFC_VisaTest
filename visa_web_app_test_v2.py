@@ -2,8 +2,8 @@ import streamlit as st
 import datetime
 import json
 
-from helpers.response_recorder import ResponseRecorder
-#from helpers.visa_api_client import VisaAPIClient
+#from helpers.response_recorder import ResponseRecorder
+from helpers.visa_api_client import VisaAPIClient
 
 def submitTest(cust,vendor,amt):
     st.text('Payment submitted')
@@ -39,10 +39,10 @@ def test_push_funds_transactions(cust,vendor,amt):
     response = visa_api_client.do_mutual_auth_request(base_uri + resource_path, push_funds_request_post,
                                                                'CFC Push Funds Transaction Test', 'post')
 															   
-def setUp():
+def setUpTest():
     st.text('Successfully called function')
 	
-def setUpReal():
+def setUp():
     #super(TestFundsTransfer, self).setUp()
     visa_api_client = VisaAPIClient()
     #self.response_recorder = ResponseRecorder()
