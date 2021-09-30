@@ -5,6 +5,9 @@ import json
 #from helpers.response_recorder import ResponseRecorder
 from helpers.visa_api_client import VisaAPIClient
 
+pull_funds_request = ""
+push_funds_request_post = ""
+
 def submitTest(cust,vendor,amt):
     st.text('Payment submitted')
 	
@@ -43,6 +46,8 @@ def setUpTest():
     st.text('Successfully called function')
 	
 def setUp():
+    global pull_funds_request
+    global push_funds_request_post
     #super(TestFundsTransfer, self).setUp()
     visa_api_client = VisaAPIClient()
     #self.response_recorder = ResponseRecorder()
