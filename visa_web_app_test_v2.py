@@ -5,24 +5,6 @@ import json
 from helpers.response_recorder import ResponseRecorder
 #from helpers.visa_api_client import VisaAPIClient
 
-"""
-# Code for Charlottesville
-Visa API Test
-Submit Transactions
-
-"""
-
-setUp()
-
-customer_acct = st.text_input("Customer Account: ", 4957030420210454)
-
-vendor_acct = st.text_input("Vendor Account: ", 4957030420210462)
-
-amount = st.text_input("Amount: ", 90.14)
-
-if(st.button("Submit")):
-    submitTest(customer_acct, vendor_acct, amount)
-	
 def submitTest(cust,vendor,amt):
     st.text('Payment submitted')
 	
@@ -104,5 +86,25 @@ def setUp():
             "transactionIdentifier": "381228649430015"
         }''')
     
+
+"""
+# Code for Charlottesville
+Visa API Test
+Submit Transactions
+
+"""
+
+setUp()
+
+customer_acct = st.text_input("Customer Account: ", 4957030420210454)
+
+vendor_acct = st.text_input("Vendor Account: ", 4957030420210462)
+
+amount = st.text_input("Amount: ", 90.14)
+
+if(st.button("Submit")):
+    submitTest(customer_acct, vendor_acct, amount)
+	
+
 
 
