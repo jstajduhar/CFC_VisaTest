@@ -37,5 +37,9 @@ API Test
   
     jupyter kernelgateway --KernelGatewayApp.api='kernel_gateway.notebook_http' --KernelGatewayApp.seed_uri='CFC_VisaTest/API_test/API_Endpoint_Test.ipynb'
   
+Streamlit.io
+
+  There is a very basic Streamlit app up and running that lets you put in customer and vendor IDs and an amount and submits it to the Visa API sandbox.  I had to actually put the certs and passwords into the Git repo so this may not be viable long-term.
   
+    https://share.streamlit.io/jstajduhar/cfc_visatest/main/visa_web_app_test_v2.py
 
