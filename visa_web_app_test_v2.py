@@ -16,8 +16,8 @@ def submitTest(cust,vendor,amt):
     test_push_funds_transactions(cust,vendor,amt)
 	
     st.text('Payment completed')
-    st.text('Customer ${cust} paid Vendor ${vendor} $${amt}')
-	
+    st.text('Customer ' + customer_acct + ' paid Vendor ' + vendor_acct + ' $' + amount)
+   	
     return
 	
 def test_pull_funds_transactions(cust,vendor,amt):
