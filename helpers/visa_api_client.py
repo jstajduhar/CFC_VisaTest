@@ -90,8 +90,10 @@ class VisaAPIClient:
         #password= self.config.get('VDP','password')
         user_name = st.secrets["VISA_USER_ID"]
         password= st.secrets["VISA_PASSWORD"]
-        cert = self.config.get('VDP','cert')
-        key = self.config.get('VDP','key')
+        #cert = self.config.get('VDP','cert')
+        #key = self.config.get('VDP','key')
+        cert = st.secrets["VISA_CERT"]
+        key = st.secrets["VISA_KEY"]
         if not os.path.isfile(cert):
             cert = os.path.abspath(os.path.join(os.path.dirname(__file__),"..")) + "/" + cert
         if not os.path.isfile(key):
