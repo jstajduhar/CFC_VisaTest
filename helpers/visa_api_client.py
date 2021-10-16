@@ -13,6 +13,8 @@ import random
 import string
 import sys
 
+import streamlit as st
+
 import requests
 
 if sys.version_info < (3, 0):
@@ -84,8 +86,10 @@ class VisaAPIClient:
 
         
     def do_mutual_auth_request(self, path, body, test_info, method_type, input_headers={}, stream=False, timeout = 10, mle=False):
-        user_name = self.config.get('VDP','userId')
-        password= self.config.get('VDP','password')
+        #user_name = self.config.get('VDP','userId')
+        #password= self.config.get('VDP','password')
+        user_name = st.secrets["VISA_USER_ID"]
+        password= st.secrets["VISA_PASSWORD"]
         cert = self.config.get('VDP','cert')
         key = self.config.get('VDP','key')
         if not os.path.isfile(cert):
