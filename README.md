@@ -39,7 +39,7 @@ API Test
   
 Streamlit.io
 
-  There is a very basic Streamlit app up and running that lets you put in customer and vendor IDs and an amount and submits it to the Visa API sandbox.  I had to actually put the certs and passwords into the Git repo so this may not be viable long-term.
+  There is a very basic Streamlit app up and running that lets you put in customer and vendor IDs and an amount and submits it to the Visa API sandbox.  The app is now using Streamlit secrets to hold the keys and passwords so they do not need to be included in the repo.
   
     https://share.streamlit.io/jstajduhar/cfc_visatest/main/visa_web_app_test_v2.py
 
